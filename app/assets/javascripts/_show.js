@@ -1,5 +1,5 @@
 function show(){
-  getStocks(urlParams['tickers'], true);
+  getStocks(urlParams['tickers']);
   populateLeftTabs();
   createPerformanceBars();
 }
