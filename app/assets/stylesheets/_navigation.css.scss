@@ -1,0 +1,75 @@
+div.navbar-brand{
+  padding: 2px 15px;
+}
+
+img.fb-profile{
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  height:21px;
+  padding-right:6px;
+}
+li.visible-xs-block{
+  right:10px;
+  ul{
+    top: 48px;
+  }
+}
+nav.navbar-default{
+  background-image: linear-gradient(to bottom, #313030 0, #000000 100%);
+  background-color: black;
+  .nav-right.pull-right>li.open{
+    &.visible-xs ul, ul{
+      right:0;
+      left:initial;
+      position:absolute;//
+      &:before{
+        left: 132px;
+        top: -16px;
+        border: 8px solid transparent;
+        border-bottom: 8px solid #CCFFB1
+      }
+    }
+  }
+  .navbar-nav > li{ 
+    a{
+      color: rgb(249,249,249);
+      &:hover{
+        color:#777;
+        cursor:pointer;
+        cursor:hand;
+      }
+    }
+    &.open{
+      a, a:hover{
+        color: rgb(249,249,249);
+        background-color: initial;
+      }
+      ul {
+        padding:0px;
+        li{
+          a{
+            background-image: linear-gradient(to bottom, #E8B1FF 0, #986AD2 100%);
+            &:hover{
+              color:rgb(184, 184, 184);
+              background-image: linear-gradient(to bottom, #C63EFF 0%, #8F58D3 100%);
+            }
+          }
+
+        }
+        &:before{
+          content: " ";
+          position: absolute;
+          left: 12px;
+          top: -16px;
+          border: 8px solid transparent;
+          border-bottom: 8px solid #E8B1FF;
+        }
+      }
+    }
+  }
+}
+
+div.main-container{
+  margin-left:0px; 
+  margin-right:1px;
+}

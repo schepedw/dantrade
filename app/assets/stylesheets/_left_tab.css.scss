@@ -1,0 +1,21 @@
+.ticker-symbol{
+  font-size:15pt;
+  font-family:arial;
+  padding-left:29px;
+}
+
+button.rm-stock, button.add-stock{
+  border-radius:18px;
+}
+
+.ticker-container{
+  border:1px solid gray;
+  border-left:0px;
+  background-image: linear-gradient(to bottom, #CCFFB1 0, #4DE786 100%);
+  padding:9px 0px;
+}
+
+div.left-tabs{
+  margin-top:-21px;
+  margin-left:-15px;
+}

@@ -1,0 +1,140 @@
+@import "compass/css3";
+
+/* Variables */
+
+$circle: 15px;
+$bar: 5px;
+
+$barColor: #888;
+$circleColor: tomato;
+
+/* Tooltip */
+
+.timeline {
+  $width: 90%;
+  max-width: 1200px;
+  width: $width;
+  position: relative;
+}
+
+div.timeline-container{
+  height: 40px;
+  padding-right: 50px;
+  padding-left:0px;
+}
+
+.timeline-panel-head{
+  border-bottom:1px solid black;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  background-image: linear-gradient(to bottom, #B7D5F5 0, #1A93BE 100%);
+}
+
+div.timeline-area{
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding:0px;
+  margin-left:10px;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px){
+  div.timeline-area{
+    margin-left:0px;
+    padding-left:3px;
+  }
+  span.timeline-label.text-center{
+    text-align:left;
+  }
+  div.xs-no-padding{
+    padding:0px;
+  }
+  div.timeline-panel-head{
+    margin-left:-3px;
+  }
+}
+.timeline-label{
+  padding-top: 11px;
+  padding-left:10px;
+  font: 28px arial;
+}
+
+.timeline-bar {
+  position: relative;
+  background:$barColor;
+  height: $bar;
+  width: 100%;
+  top: 50%;
+}
+
+.timeline-point {
+  border-radius: $circle;
+  display: block;
+  background: $circleColor;
+  position: absolute;
+  height: $circle;
+  width: $circle;
+  z-index: 10;
+  
+  $transition: all 0.1s linear;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  cursor: pointer;
+  
+  &:hover {
+    $size: 1.3;
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    -ms-transform: scale($size);
+    -o-transform: scale($size);
+    transform: scale($size);
+  }
+}
+
+.point-1 {
+  left: 0;
+  top: 0 - $bar;
+}
+
+.point-2 {
+  left: 50%;
+  top: 0 - ($bar + $circle);
+}
+
+.point-3 {
+  left: 75%;
+  top: 0 - ($bar + ($circle * 2));
+}
+
+.point-4 {
+  left: 100%;
+  top: 0 - ($bar + ($circle * 3));
+}
+
+/* Tooltips */
+.timeline-point[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: attr(data-tooltip);
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 13px;
+    border: none;
+    color: #fff;
+    bottom: 150%;
+    left: -100%;
+    display: none;
+    z-index: 999;
+  }
+
+  &:hover:after {
+    display: block;
+  }
+}
+
