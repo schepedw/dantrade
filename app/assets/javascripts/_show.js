@@ -1,4 +1,6 @@
 function show(){
+  //TODO:write a catch(return?) for no tickers
+  //TODO: new ticker gets appended to ticker url param, but what if there is none
   getStocks(urlParams['tickers']);
   populateLeftTabs();
   createPerformanceBars();
