@@ -13,5 +13,5 @@ A brief foray into front end development.
 
 This api is used by the front end. aJax -> api ->dev.markitondemand.com/Api/v2/Quote/json
 
-Having ajax call this api rather than markitondemand allows me to get around markitondemand not implementing [cors](http://enable-cors.org/)
+Having ajax call this api rather than markitondemand allows me to get around markitondemand not implementing [cors][http://enable-cors.org/]
 
