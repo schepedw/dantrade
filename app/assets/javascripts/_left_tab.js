@@ -3,7 +3,7 @@ $(function(){
   $('button.rm-stock').click(function(){
     tickerToDelete=$(this).data('ticker');
     urlParams.tickers.remove(tickerToDelete);
-    window.location='/show?tickers='+urlParams.tickers.join(',')
+    window.location='/?tickers='+urlParams.tickers.join(',')
   });
 
   $('button.add-stock').click(function(){
