@@ -3,7 +3,10 @@ $(function(){
   $('button.rm-stock').click(function(){
     tickerToDelete=$(this).data('ticker');
     urlParams.tickers.remove(tickerToDelete);
-    window.location='/?tickers='+urlParams.tickers.join(',')
+    if (urlParams.tickers.length )
+      window.location='/?tickers='+urlParams.tickers.join(',');
+    else
+      window.location='/';
   });
 
   $('button.add-stock').click(function(){
@@ -33,6 +36,6 @@ function populateLeftTabs(){
       $("<span class='ticker-symbol'>"+tickerName+"</span>")).append($("<span class='ticker-price' id='"+tickerName+"-price' />"))).append(
       $("<div class='col-xs-4 text-right' />").append(
         $("<button type='button' class='btn btn-danger btn-sm rm-stock' data-ticker='"+tickerName+"'></button>").append($("<i class='fa fa-remove'>"))));
-    $('.left-tabs').prepend(a);
+        $('.left-tabs').prepend(a);
   }
 }
