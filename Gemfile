@@ -25,4 +25,9 @@ gem "twitter-bootstrap-rails"
 #gem 'spring',        group: :development
 gem 'rack-cors', :require => 'rack/cors'
 gem 'curb', '~> 0.8.6'
-gem 'pry'
+gem 'pry', :group => [:development, :test]
+
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+end
