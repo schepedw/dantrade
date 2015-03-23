@@ -28,12 +28,12 @@ All you should need to do is
 
 rspec-rails and cucumber-rails are the gems used for testing
 
-To utilize them, add the following gems in the Gemfile
+To utilize them, add the following the Gemfile
 
-  `group :test do`
-    `gem 'rspec-rails'`
-    `gem 'cucumber-rails'`
-  `end`
+  group :test do
+    gem 'rspec-rails'
+    gem 'cucumber-rails'
+  end
 
 Then run `bundle install`
 
