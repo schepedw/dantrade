@@ -1,12 +1,13 @@
 == DanTrade
 
-A brief foray into front end development.
+A brief foray into front end development, used for workshops at Enova 1/20/15, 3/24/15
 
 ===Tools
 * Bootstrap
 * jQuery
 * fontAwesome
 * sass
+* cucumber
 
 ===API
 /compare.json?ticker=xxxx
@@ -19,6 +20,12 @@ Having ajax call this api rather than markitondemand allows me to get around mar
 Cucumber is used for testing this app.
 
 ====Setup
+_I only put this in the README for anyone who is curious how to set up cucumber_
+All you should need to do is
+
+  bundle install
+  rake cucumber
+
 rspec-rails and cucumber-rails are the gems used for testing
 
 To utilize them, add the following the Gemfile
