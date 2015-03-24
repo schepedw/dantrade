@@ -20,12 +20,13 @@ Having ajax call this api rather than markitondemand allows me to get around mar
 Cucumber is used for testing this app.
 
 ====Setup
-_I only put this in the README for anyone who is curious how to set up cucumber_
-All you should need to do is
+You should only need to run the following two lines.
 
   bundle install
   rake cucumber
 
+=====Setup (more detail)
+__This has already been done for you. It's only explained here for reference.__
 rspec-rails and cucumber-rails are the gems used for testing
 
 To utilize them, add the following the Gemfile
